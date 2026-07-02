@@ -3,16 +3,16 @@ import { Experience } from "../types";
 export const experience: Experience[] = [
   {
     id: "exp-1",
-    company: "Company Name",
-    role: "Your Role",
-    startDate: "Jan 2024",
-    endDate: "Present",
+    company: "Depth Search",
+    role: "Front End Developer",
+    startDate: "september 2025",
+    endDate: "march 2026",
     description: "One-line summary of what you did there.",
     responsibilities: [
       "Responsibility one",
       "Responsibility two",
     ],
-    technologies: ["React", "Next.js", "Tailwind CSS"],
+    technologies: [ "Next.js", "Tailwind CSS", "Custom Ui", "AWS"],
   },
 ];
 

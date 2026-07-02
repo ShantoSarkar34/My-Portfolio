@@ -1,4 +1,6 @@
 import About from "../components/sections/About";
+import Education from "../components/sections/Education";
+import Experience from "../components/sections/Experience";
 import Hero from "../components/sections/Hero";
 import Skills from "../components/sections/Skills";
 
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero/>
       <About/>
       <Skills/>
+      <Education/>
+      <Experience/>
     </main>
   );
 }
