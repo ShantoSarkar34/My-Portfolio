@@ -8,7 +8,7 @@ export const profile: Profile = {
   bio: "Write 2-3 sentences here about your programming journey, what you enjoy building, and a hobby or interest outside code. This shows up in the About section.",
   photo: "/images/profile_2.jpg",
   resumeUrl: "/resume.pdf",
-  email: "santo9070.me@gmail.com",
+  email: "shanto9070.me@gmail.com",
   phone: "+880-1783805534",
   whatsapp: "+880-1783805534",
   location: "Bogra, Rajshahi, Bangladesh",
