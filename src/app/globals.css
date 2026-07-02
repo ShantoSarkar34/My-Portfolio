@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
+:root {
+  --bg: #F7F8FA;
+  --surface: #FFFFFF;
+  --text: #14171C;
+  --muted: #5B6472;
+  --accent: #0F9E82;
+  --accent-warm: #D97B2B;
+}
+
+.dark {
+  --bg: #0B0D10;
+  --surface: #14171C;
+  --text: #E6E8EB;
+  --muted: #8B93A1;
+  --accent: #7DD3C0;
+  --accent-warm: #F2A65A;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
