@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import { profile } from "@/src/data/profile";
 import ThemeToggle from "../ui/ThemeToggle";
+import { usePathname } from "next/navigation";
 
 
 const NAV_LINKS = [
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -28,6 +30,12 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    // Not on the home page — no sections to observe, clear active state
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
     const sections = NAV_LINKS.map((link) =>
       document.getElementById(link.href.slice(1))
     ).filter((el): el is HTMLElement => el !== null);
@@ -41,7 +49,6 @@ export default function Navbar() {
         });
       },
       {
-        // Triggers when a section occupies the middle band of the viewport
         rootMargin: "-40% 0px -50% 0px",
         threshold: 0,
       }
@@ -49,8 +56,8 @@ export default function Navbar() {
 
     sections.forEach((section) => observer.observe(section));
     return () => sections.forEach((section) => observer.unobserve(section));
-  }, []);
-
+  }, [pathname]);
+  
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-300 ${
@@ -61,7 +68,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-0 py-4">
         {/* Logo */}
-        <a href="#home" className="font-mono text-lg font-bold text-(--text) shrink-0">
+        <a href="/" className="font-mono text-lg font-bold text-(--text) shrink-0">
           <span className="text-(--accent)">&lt;</span>
           {/* {profile.name.split(" ")[0]} */}
           README.md
