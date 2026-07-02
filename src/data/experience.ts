@@ -4,17 +4,28 @@ export const experience: Experience[] = [
   {
     id: "exp-1",
     company: "Depth Search",
-    role: "Front End Developer",
-    startDate: "september 2025",
-    endDate: "march 2026",
-    description: "One-line summary of what you did there.",
+    role: "Frontend Developer",
+    startDate: "August 2025",
+    endDate: "Jun 2026",
+    description:
+      "Building modern, responsive, and production-ready web applications while collaborating with a remote development team.",
+
     responsibilities: [
-      "Responsibility one",
-      "Responsibility two",
+      "Developed modern, responsive user interfaces using Next.js, React, TypeScript, and Tailwind CSS.",
+      "Converted UI/UX designs into reusable, scalable, and maintainable frontend components.",
+      "Integrated REST APIs and managed asynchronous data fetching for dynamic applications.",
+      "Collaborated closely with backend developers and designers to deliver production-ready features.",
+      "Optimized application performance, responsiveness, and cross-browser compatibility.",
+      "Maintained clean code architecture, reusable components, and industry best practices throughout development.",
     ],
-    technologies: [ "Next.js", "Tailwind CSS", "Custom Ui", "AWS"],
+
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "REST API",
+      "AWS",
+    ],
   },
 ];
-
-// If you have no experience yet, leave this as an empty array: []
-// The Experience section component will handle showing/hiding based on this.

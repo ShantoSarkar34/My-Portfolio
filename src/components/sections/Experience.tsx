@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="scroll-mt-24 px-6 md:px-12 py-24 max-w-6xl mx-auto"
+      className="scroll-mt-24 px-6 md:px-12 py-24 max-w-6xl mx-auto lg:px-0"
     >
       <SectionHeading
         eyebrow="~/experience $ git blame --stats"

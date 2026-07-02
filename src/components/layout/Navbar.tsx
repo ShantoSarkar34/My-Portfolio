@@ -63,7 +63,8 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home" className="font-mono text-lg font-bold text-(--text) shrink-0">
           <span className="text-(--accent)">&lt;</span>
-          {profile.name.split(" ")[0]}
+          {/* {profile.name.split(" ")[0]} */}
+          README.md
           <span className="text-(--accent)">/&gt;</span>
         </a>
 

@@ -128,6 +128,7 @@ export default function Hero() {
         </div>
 
         {/* Right: photo as code editor window */}
+        
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -135,12 +136,12 @@ export default function Hero() {
           className="relative mx-auto md:mx-0 w-72 md:w-80"
         >
           {/* Offset dashed frame behind — depth accent */}
-          <div className="absolute -top-3 -left-3 w-full h-full rounded-2xl border-2 border-dashed border-(--accent)/40 dark:border-(--accent)/30" />
+          <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl border-2 border-dashed border-(--accent)/40 dark:border-(--accent)/30" />
 
           {/* Editor window */}
           <div className="relative rounded-2xl overflow-hidden border border-(--accent) dark:border-(--accent)/20 bg-(--surface) shadow-[0_20px_60px_-15px_rgba(0,0,0,0.6)]">
             {/* Window title bar */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-black/20">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-white/50 bg-black/20">
               <div className="flex gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
                 <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
@@ -152,13 +153,13 @@ export default function Hero() {
             </div>
 
             {/* Photo */}
-            <div className="relative w-full aspect-square">
+            <div className="relative w-full aspect-310/355">
               <Image
                 src={profile.photo}
                 alt={profile.name}
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
 

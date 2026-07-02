@@ -13,7 +13,12 @@ export const socials: SocialLink[] = [
   },
   {
     name: "Facebook",
-    url: "https://facebook.com/your-username",
+    url: "https://www.facebook.com/shanto9070",
     icon: "FaFacebook",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/shanto.9070?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    icon: "FaInstagram",
   },
 ];
