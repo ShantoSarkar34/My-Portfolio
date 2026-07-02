@@ -4,7 +4,7 @@ import "./globals.css";
 import CustomCursor from "../components/ui/CustomCursor";
 import ThemeProvider from "../components/ThemeProvider";
 import Navbar from "../components/layout/Navbar";
-
+import SmoothScrollProvider from "../components/SmoothScrollProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,14 +31,15 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning
-      >
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <ThemeProvider>
-        <CustomCursor />
-        <Navbar/>
-        {children}
+          <SmoothScrollProvider>
+            <Navbar />
+            {children}
+          </SmoothScrollProvider>
+          <CustomCursor />
         </ThemeProvider>
-        </body>
+      </body>
     </html>
   );
 }

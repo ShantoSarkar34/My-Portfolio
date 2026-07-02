@@ -16,8 +16,8 @@ export const about: AboutContent = {
   hobbies:
     "Write your real hobbies/interests outside coding — sports, gaming, reading, music, whatever's true. This is what makes the section feel human instead of a resume restated.",
   stats: [
-    { label: "Years Coding", value: "X+" },
-    { label: "Projects Built", value: "X+" },
-    { label: "Tech Learned", value: "X+" },
+    { label: "Years Coding", value: "2+" },
+    { label: "Projects Built", value: "44+" },
+    { label: "Tech Learned", value: "10+" },
   ],
 };
