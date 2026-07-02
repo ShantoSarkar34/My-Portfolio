@@ -1,6 +1,7 @@
 import { Skill } from "../types";
 
 export const skills: Skill[] = [
+  // Frontend
   { name: "HTML5", icon: "FaHtml5", category: "Frontend" },
   { name: "CSS3", icon: "FaCss3Alt", category: "Frontend" },
   { name: "Tailwind CSS", icon: "SiTailwindcss", category: "Frontend" },
@@ -8,13 +9,20 @@ export const skills: Skill[] = [
   { name: "TypeScript", icon: "SiTypescript", category: "Frontend" },
   { name: "React", icon: "FaReact", category: "Frontend" },
   { name: "Next.js", icon: "SiNextdotjs", category: "Frontend" },
-  { name: "Framer Motion", icon: "SiFramer", category: "Frontend" },
-  { name: "DaisyUI", icon: "SiDaisyui", category: "Frontend" },
+  { name: "Context API", icon: "FiLayers", category: "Frontend" },
 
-  // Add your backend skills here once you share them, e.g.:
+  // Backend
   { name: "Node.js", icon: "FaNodeJs", category: "Backend" },
+  { name: "Express", icon: "SiExpress", category: "Backend" },
+  { name: "JWT", icon: "SiJsonwebtokens", category: "Backend" },
 
-  { name: "Git", icon: "FaGitAlt", category: "Tools" },
-  { name: "VS Code", icon: "SiVisualstudiocode", category: "Tools" },
-  { name: "Vercel", icon: "SiVercel", category: "Deployment" },
+  // Database
+  { name: "MongoDB", icon: "SiMongodb", category: "Database" },
+  { name: "PostgreSQL", icon: "SiPostgresql", category: "Database" },
+  { name: "Prisma", icon: "SiPrisma", category: "Database" },
+  { name: "Firebase", icon: "SiFirebase", category: "Database" },
+
+  // Tools
+  { name: "GitHub", icon: "FaGithub", category: "Tools" },
+  { name: "VS Code", icon: "TbBrandVscode", category: "Tools" },
 ];
