@@ -11,6 +11,6 @@ export const profile: Profile = {
   email: "shanto9070.me@gmail.com",
   phone: "+880-1783805534",
   whatsapp: "+880-1783805534",
-  location: "Bogra, Rajshahi, Bangladesh",
+  location: "Bogura, Rajshahi, Bangladesh",
   availableForWork: true,
 };
