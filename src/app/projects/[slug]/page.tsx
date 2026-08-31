@@ -77,7 +77,7 @@ export default async function ProjectDetailPage({
           </div>
         </div>
 
-        <div className="flex gap-3 shrink-0">
+        <div className="flex gap-3 shrink-0 lg:pt-3">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -97,6 +97,30 @@ export default async function ProjectDetailPage({
             <FiGithub /> Client Code
           </a>
         </div>
+        {project.backendUrl ? (
+          <div className="flex gap-3 shrink-0 lg:pt-3">
+            {project.liveUrl && (
+              <a
+                href={project.backendUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-(--accent) text-(--bg) text-sm font-semibold hover:scale-105 transition-transform"
+              >
+                Backend Live Demo <FiExternalLink />
+              </a>
+            )}
+            <a
+              href={project.backendGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-(--accent)/30 text-(--text) text-sm font-semibold hover:border-(--accent) transition-colors"
+            >
+              <FiGithub /> Backend Client Code
+            </a>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
 
       {/* Description */}
@@ -115,7 +139,9 @@ export default async function ProjectDetailPage({
                 key={i}
                 className="flex items-start gap-2 text-(--muted) leading-relaxed"
               >
-                <span className="text-(--accent) mt-1 shrink-0 font-mono">▸</span>
+                <span className="text-(--accent) mt-1 shrink-0 font-mono">
+                  ▸
+                </span>
                 {feature}
               </li>
             ))}
@@ -125,7 +151,9 @@ export default async function ProjectDetailPage({
 
       {/* Challenges */}
       <section className="mb-10">
-        <h2 className="font-mono text-sm text-(--accent) mb-3"># Challenges Faced</h2>
+        <h2 className="font-mono text-sm text-(--accent) mb-3">
+          # Challenges Faced
+        </h2>
         <p className="text-(--muted) leading-relaxed">{project.challenges}</p>
       </section>
 
@@ -149,7 +177,12 @@ export default async function ProjectDetailPage({
                 key={i}
                 className="relative aspect-video rounded-xl overflow-hidden border border-(--accent)/20"
               >
-                <Image src={img} alt={`${project.title} screenshot ${i + 1}`} fill className="object-cover" />
+                <Image
+                  src={img}
+                  alt={`${project.title} screenshot ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
               </div>
             ))}
           </div>
