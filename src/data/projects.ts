@@ -191,6 +191,83 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ShantoSarkar34/synthera-shop.git",
     featured: true,
   },
+  {
+    id: "proj-6",
+    slug: "swiftdrop-courier-logistics-platform",
+    title: "SwiftDrop - Courier & Logistics Management Platform",
+    thumbnail: "/images/projects/swiftdrop-project/dashboard.png",
+
+    gallery: [
+      "/images/projects/swiftdrop-project/dashboard.png",
+      "/images/projects/swiftdrop-project/shipments.png",
+      "/images/projects/swiftdrop-project/shipment-details.png",
+      "/images/projects/swiftdrop-project/payments.png",
+      "/images/projects/swiftdrop-project/analytics.png",
+    ],
+
+    shortDescription:
+      "A full-stack courier and logistics platform featuring Stripe-powered shipment payments, concurrency-safe delivery assignment, state-machine-driven shipment tracking, role-based access control, and delivery-agent earnings analytics.",
+
+    description:
+      "SwiftDrop is a full-stack courier and logistics management platform that coordinates the complete shipment lifecycle between Customers, Delivery Agents, and Administrators. Customers can create shipments, pay delivery charges through Stripe Checkout, and track shipment progress. Administrators can oversee operations and assign delivery agents, while agents manage assigned deliveries, update shipment statuses, and monitor their earnings. The backend implements a controlled shipment state machine, transaction-safe status history, concurrency-safe assignment operations, webhook-driven payment confirmation, rotating refresh tokens, and role-based authorization. Built with Next.js, TypeScript, Node.js, Express.js, PostgreSQL, Prisma ORM, Stripe, and Redis, the platform emphasizes secure transactions, reliable workflow transitions, and consistent backend operations.",
+
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Express 5",
+      "PostgreSQL",
+      "Prisma ORM",
+      "REST API",
+      "Zod",
+      "JWT Authentication",
+      "Rotating Refresh Tokens",
+      "Google OAuth",
+      "bcryptjs",
+      "Stripe Checkout",
+      "Stripe Webhooks",
+      "Upstash Redis",
+      "Helmet",
+      "CORS",
+      "express-rate-limit",
+      "Vercel",
+      "Postman",
+    ],
+
+    features: [
+      "State-machine-driven shipment lifecycle that enforces valid transitions from shipment creation through assignment, pickup, transit, delivery, failed delivery, and return.",
+      "Stripe Checkout integration with server-verified webhook events, idempotent payment processing, and synchronized payment and shipment state updates.",
+      "Concurrency-safe delivery assignment and parcel claiming using transaction-scoped conditional database updates to prevent conflicting assignments.",
+      "Transactionally recorded shipment status history, preserving a traceable record of delivery workflow transitions.",
+      "Role-based access control for Customers, Delivery Agents, and Administrators, with server-side ownership checks and live user-status validation.",
+      "Secure authentication with bcrypt password hashing, short-lived access tokens, rotating refresh tokens, token revocation, and Google OAuth verification.",
+      "Delivery-agent earnings analytics that calculate commissions from eligible shipments only when delivery is completed and payment is confirmed.",
+      "Administrative operational analytics covering shipment activity, payments, users, and audit logs.",
+      "Audit logging for important business operations, including payment completion, with associated entity and event metadata.",
+      "Payment synchronization endpoint that verifies a Checkout Session directly with Stripe as a fallback when webhook delivery is delayed.",
+      "Soft-delete handling for users and shipments, helping preserve important relational records and operational history.",
+      "PostgreSQL data model organized with Prisma's multi-file schema structure and transaction-based consistency across related records.",
+      "Centralized request validation using Zod, structured API responses, security headers, CORS restrictions, and rate limiting.",
+      "Production deployment with Vercel, managed PostgreSQL, Upstash Redis, and documented REST API endpoints in Postman.",
+    ],
+
+    challenges:
+      "The main engineering challenge was maintaining consistency across interconnected shipment, payment, and delivery workflows. A controlled state machine prevents invalid shipment transitions, while transaction-scoped conditional updates protect delivery assignment from concurrent requests. Stripe integration required treating verified server-side events—not browser redirects—as the source of truth for payment completion, with idempotent processing and a session synchronization fallback. Additional challenges included rotating refresh-token management, enforcing role and resource ownership at the service layer, and keeping payment records, shipment history, and audit logs consistent across database transactions.",
+
+    futureImprovements:
+      "Potential improvements include real-time shipment tracking with WebSockets, GPS-based delivery-agent location updates, automated agent assignment based on availability and distance, customer notifications through email and SMS, proof-of-delivery uploads, delivery route optimization, estimated arrival times, scheduled pickups, advanced operational reporting, and a dedicated commission payout ledger.",
+
+    liveUrl: "https://shiftdrop-service.vercel.app/",
+    githubUrl: "https://github.com/ShantoSarkar34/swiftdrop-platform",
+    backendUrl: "https://shiftdrop-platform-backend.vercel.app/",
+    backendGithubUrl:
+      "https://github.com/ShantoSarkar34/swiftdrop-platform-backend",
+
+    featured: true,
+  },
 
   // {
   //   id: "proj-2",
