@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: "proj-5",
     slug: "nexora-ai-freelance-marketplace",
     title: "Nexora - AI-Powered Freelance Marketplace",
-    thumbnail: "/images/projects/nexora-project/dashboard_1.png",
+    thumbnail: "/images/projects/nexora-project/nexora_admin.png",
 
     gallery: [
       "/images/projects/nexora-project/hero.png",
@@ -83,126 +83,17 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "proj-4",
-    slug: "fixitnow-home-service",
-    title: "FixItNow Home Service Platform",
-    thumbnail: "/images/projects/fixit-project/hero.png",
-
-    gallery: [
-      "/images/projects/fixit-project/hero.png",
-      "/images/projects/fixit-project/service.png",
-      "/images/projects/fixit-project/customer-profile.png",
-      "/images/projects/fixit-project/technician-profile.png",
-      "/images/projects/fixit-project/admin-profile.png",
-      "/images/projects/fixit-project/how-to-work.png",
-    ],
-
-    shortDescription:
-      "A modern full-stack home service booking platform with role-based dashboards, secure authentication, online payments, and complete service management for Customers, Technicians, and Admins.",
-
-    description:
-      "FixItNow is a complete home service marketplace built with Next.js and Express.js, designed to connect customers with skilled technicians for various household services. Customers can browse services, book appointments, complete secure online payments, and leave reviews after service completion. Technicians can manage their own services, availability, and booking requests, while administrators have full control over users, categories, technicians, and bookings through a dedicated dashboard. The project follows a modern full-stack architecture using Next.js App Router, TypeScript, Prisma ORM, PostgreSQL, JWT authentication with HttpOnly cookies, and SSLCommerz payment integration, delivering a secure, scalable, and responsive user experience.",
-
-    techStack: [
-      "Next.js 15",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Shadcn UI",
-      "TanStack Query",
-      "Node.js",
-      "Express.js",
-      "Prisma ORM",
-      "PostgreSQL",
-      "JWT Authentication",
-      "HttpOnly Cookies",
-      "REST API",
-      "Stripe Payment Gateway",
-    ],
-
-    features: [
-      "Role-based authentication and authorization for Customer, Technician, and Admin.",
-      "Modern responsive UI built with Next.js App Router and Tailwind CSS.",
-      "Customers can browse services, book appointments, track booking status, complete payments, and submit reviews.",
-      "Technicians can create, update, and manage their services along with booking requests.",
-      "Admin dashboard for managing users, technicians, bookings, and service categories.",
-      "Secure JWT authentication using HttpOnly cookies with automatic token refresh.",
-      "Integrated SSLCommerz payment gateway for secure online payments.",
-      "Dynamic technician profiles with ratings, experience, and offered services.",
-      "Advanced booking workflow including Pending, Accepted, Completed, and Cancelled statuses.",
-      "Profile management system for all user roles with editable personal information.",
-      "Smooth animations and premium UI using Framer Motion.",
-      "Fully responsive design optimized for desktop, tablet, and mobile devices.",
-    ],
-
-    challenges:
-      "The biggest challenge was designing a secure role-based authentication system that worked seamlessly across both the frontend and backend while protecting routes for Customers, Technicians, and Admins. Another major challenge was integrating JWT authentication with HttpOnly cookies, implementing automatic token refresh, managing booking workflows, and securely integrating SSLCommerz payment processing without compromising the user experience.",
-
-    futureImprovements:
-      "Future enhancements include real-time notifications using WebSockets, live technician location tracking, in-app messaging between customers and technicians, advanced service search with filters and maps, appointment scheduling with calendar integration, image uploads using cloud storage, email notifications, analytics dashboards, multi-language support, and Progressive Web App (PWA) functionality.",
-
-    liveUrl: "https://fixitnow-service.vercel.app/",
-    githubUrl: "https://github.com/ShantoSarkar34/FixItNow-Home-Service",
-    backendUrl: "https://fixitnow-server.onrender.com/",
-    backendGithubUrl:
-      "https://github.com/ShantoSarkar34/FixItNow-home-service-backend",
-
-    featured: true,
-  },
-  {
-    id: "proj-1",
-    slug: "synthera-project",
-    title: "Synthera Online Shop with AI",
-    thumbnail: "/images/projects/project-1.png",
-    gallery: [],
-    shortDescription:
-      "A full-featured AI-powered e-commerce platform with role-based dashboards, product management, and an intelligent customer support chatbot.",
-
-    description:
-      "Synthera is a modern full-stack e-commerce application designed to provide a seamless shopping experience for customers while offering dedicated dashboards for sellers and administrators. One of its standout features is an AI-powered chatbot that assists users with product information, login issues, purchasing guidance, and general site navigation. The platform implements secure authentication, role-based authorization, complete product management, shopping cart functionality, and an intuitive admin panel.",
-
-    techStack: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Firebase Authentication",
-      "Tailwind CSS",
-      "REST API",
-    ],
-
-    features: [
-      "Secure role-based authentication for Admin, Seller, and User.",
-      "AI-powered chatbot for customer support and product assistance.",
-      "Complete product CRUD operations with seller-specific management.",
-      "Shopping cart and order workflow.",
-      "Admin dashboard for managing users and sellers.",
-      "Responsive UI optimized for desktop and mobile devices.",
-    ],
-
-    challenges:
-      "One of the biggest challenges was implementing a scalable role-based authorization system while ensuring each user type could only access permitted routes and resources. Integrating the AI chatbot into the shopping experience without affecting overall application performance also required careful planning.",
-
-    futureImprovements:
-      "I plan to integrate secure online payment gateways, implement advanced product search with filtering, add order tracking, improve AI capabilities with contextual conversations, and migrate the project to Next.js with PostgreSQL and Prisma for better scalability.",
-
-    liveUrl: "https://synthera-shop.vercel.app/",
-    githubUrl: "https://github.com/ShantoSarkar34/synthera-shop.git",
-    featured: true,
-  },
-  {
     id: "proj-6",
     slug: "swiftdrop-courier-logistics-platform",
     title: "SwiftDrop - Courier & Logistics Management Platform",
-    thumbnail: "/images/projects/swiftdrop-project/dashboard.png",
+    thumbnail: "/images/projects/shiftdrop_project/hero.png",
 
     gallery: [
-      "/images/projects/swiftdrop-project/dashboard.png",
-      "/images/projects/swiftdrop-project/shipments.png",
-      "/images/projects/swiftdrop-project/shipment-details.png",
-      "/images/projects/swiftdrop-project/payments.png",
-      "/images/projects/swiftdrop-project/analytics.png",
+      "/images/projects/shiftdrop_project/hero.png",
+      "/images/projects/shiftdrop_project/admin_dashboard.png",
+      "/images/projects/shiftdrop_project/delivery_agent-dashboard.png",
+      "/images/projects/shiftdrop_project/customer_dashboard.png",
+      "/images/projects/shiftdrop_project/hero_dark.png",
     ],
 
     shortDescription:
@@ -268,6 +159,116 @@ export const projects: Project[] = [
 
     featured: true,
   },
+  {
+    id: "proj-4",
+    slug: "fixitnow-home-service",
+    title: "FixItNow Home Service Platform",
+    thumbnail: "/images/projects/fixit-project/admin-profile.png",
+
+    gallery: [
+      "/images/projects/fixit-project/hero.png",
+      "/images/projects/fixit-project/service.png",
+      "/images/projects/fixit-project/customer-profile.png",
+      "/images/projects/fixit-project/technician-profile.png",
+      "/images/projects/fixit-project/admin-profile.png",
+      "/images/projects/fixit-project/how-to-work.png",
+    ],
+
+    shortDescription:
+      "A modern full-stack home service booking platform with role-based dashboards, secure authentication, online payments, and complete service management for Customers, Technicians, and Admins.",
+
+    description:
+      "FixItNow is a complete home service marketplace built with Next.js and Express.js, designed to connect customers with skilled technicians for various household services. Customers can browse services, book appointments, complete secure online payments, and leave reviews after service completion. Technicians can manage their own services, availability, and booking requests, while administrators have full control over users, categories, technicians, and bookings through a dedicated dashboard. The project follows a modern full-stack architecture using Next.js App Router, TypeScript, Prisma ORM, PostgreSQL, JWT authentication with HttpOnly cookies, and SSLCommerz payment integration, delivering a secure, scalable, and responsive user experience.",
+
+    techStack: [
+      "Next.js 15",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Shadcn UI",
+      "TanStack Query",
+      "Node.js",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL",
+      "JWT Authentication",
+      "HttpOnly Cookies",
+      "REST API",
+      "Stripe Payment Gateway",
+    ],
+
+    features: [
+      "Role-based authentication and authorization for Customer, Technician, and Admin.",
+      "Modern responsive UI built with Next.js App Router and Tailwind CSS.",
+      "Customers can browse services, book appointments, track booking status, complete payments, and submit reviews.",
+      "Technicians can create, update, and manage their services along with booking requests.",
+      "Admin dashboard for managing users, technicians, bookings, and service categories.",
+      "Secure JWT authentication using HttpOnly cookies with automatic token refresh.",
+      "Integrated SSLCommerz payment gateway for secure online payments.",
+      "Dynamic technician profiles with ratings, experience, and offered services.",
+      "Advanced booking workflow including Pending, Accepted, Completed, and Cancelled statuses.",
+      "Profile management system for all user roles with editable personal information.",
+      "Smooth animations and premium UI using Framer Motion.",
+      "Fully responsive design optimized for desktop, tablet, and mobile devices.",
+    ],
+
+    challenges:
+      "The biggest challenge was designing a secure role-based authentication system that worked seamlessly across both the frontend and backend while protecting routes for Customers, Technicians, and Admins. Another major challenge was integrating JWT authentication with HttpOnly cookies, implementing automatic token refresh, managing booking workflows, and securely integrating SSLCommerz payment processing without compromising the user experience.",
+
+    futureImprovements:
+      "Future enhancements include real-time notifications using WebSockets, live technician location tracking, in-app messaging between customers and technicians, advanced service search with filters and maps, appointment scheduling with calendar integration, image uploads using cloud storage, email notifications, analytics dashboards, multi-language support, and Progressive Web App (PWA) functionality.",
+
+    liveUrl: "https://fixitnow-service.vercel.app/",
+    githubUrl: "https://github.com/ShantoSarkar34/FixItNow-Home-Service",
+    backendUrl: "https://fixitnow-server.onrender.com/",
+    backendGithubUrl:
+      "https://github.com/ShantoSarkar34/FixItNow-home-service-backend",
+
+    featured: true,
+  },
+  // {
+  //   id: "proj-1",
+  //   slug: "synthera-project",
+  //   title: "Synthera Online Shop with AI",
+  //   thumbnail: "/images/projects/project-1.png",
+  //   gallery: [],
+  //   shortDescription:
+  //     "A full-featured AI-powered e-commerce platform with role-based dashboards, product management, and an intelligent customer support chatbot.",
+
+  //   description:
+  //     "Synthera is a modern full-stack e-commerce application designed to provide a seamless shopping experience for customers while offering dedicated dashboards for sellers and administrators. One of its standout features is an AI-powered chatbot that assists users with product information, login issues, purchasing guidance, and general site navigation. The platform implements secure authentication, role-based authorization, complete product management, shopping cart functionality, and an intuitive admin panel.",
+
+  //   techStack: [
+  //     "React",
+  //     "Node.js",
+  //     "Express.js",
+  //     "MongoDB",
+  //     "Firebase Authentication",
+  //     "Tailwind CSS",
+  //     "REST API",
+  //   ],
+
+  //   features: [
+  //     "Secure role-based authentication for Admin, Seller, and User.",
+  //     "AI-powered chatbot for customer support and product assistance.",
+  //     "Complete product CRUD operations with seller-specific management.",
+  //     "Shopping cart and order workflow.",
+  //     "Admin dashboard for managing users and sellers.",
+  //     "Responsive UI optimized for desktop and mobile devices.",
+  //   ],
+
+  //   challenges:
+  //     "One of the biggest challenges was implementing a scalable role-based authorization system while ensuring each user type could only access permitted routes and resources. Integrating the AI chatbot into the shopping experience without affecting overall application performance also required careful planning.",
+
+  //   futureImprovements:
+  //     "I plan to integrate secure online payment gateways, implement advanced product search with filtering, add order tracking, improve AI capabilities with contextual conversations, and migrate the project to Next.js with PostgreSQL and Prisma for better scalability.",
+
+  //   liveUrl: "https://synthera-shop.vercel.app/",
+  //   githubUrl: "https://github.com/ShantoSarkar34/synthera-shop.git",
+  //   featured: true,
+  // },
+  
 
   // {
   //   id: "proj-2",
