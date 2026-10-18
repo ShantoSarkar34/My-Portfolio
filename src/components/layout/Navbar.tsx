@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
+  { label: "Service", href: "#services" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
 ];
@@ -48,7 +49,7 @@ export default function Navbar() {
         });
       },
       {
-        rootMargin: "-40% 0px -50% 0px",
+        rootMargin: "-20% 0px -25% 0px",
         threshold: 0,
       }
     );
@@ -82,6 +83,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
+                  onClick={() => setActiveSection(link.href.slice(1))}
                   className={`relative py-1 text-sm font-medium transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:bg-(--accent) after:transition-transform after:duration-300 ${
                     isActive
                       ? "text-(--accent) after:scale-x-100"
@@ -130,7 +132,10 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setActiveSection(link.href.slice(1));
+                      setIsOpen(false);
+                    }}
                     className={`block py-3 text-sm font-medium transition-colors ${
                       isActive ? "text-(--accent)" : "text-(--muted) hover:text-(--accent)"
                     }`}

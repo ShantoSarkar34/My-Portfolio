@@ -20,8 +20,8 @@ export default function Home() {
       <Education />
       <Services />
       <Experience />
-      <CaseStudies />
       <BackendHighlights />
+      <CaseStudies />
       {/* <Testimonials /> */}
       <Projects />
       <Contact />
