@@ -64,7 +64,7 @@ export const services: Service[] = [
     title: "Authentication & Authorization",
     description:
       "Production-grade auth systems with JWT access tokens, rotating refresh tokens, HttpOnly cookies, and social OAuth providers. Role-based access control for multi-tenant applications.",
-    icon: "FaShieldHalved",
+    icon: "FaShieldAlt", 
     features: [
       "JWT + rotating refresh tokens",
       "HttpOnly cookie storage",
