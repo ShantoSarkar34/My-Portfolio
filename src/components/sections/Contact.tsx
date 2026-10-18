@@ -1,84 +1,56 @@
 "use client";
 
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState, useTransition, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
 import SectionHeading from "../ui/SectionHeading";
 import { profile } from "@/src/data/profile";
+import { submitContactForm, ContactFormState } from "@/src/app/contact/action";
 
 type Status = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<Status>("idle");
+  const [isPending, startTransition] = useTransition();
+  const [serverState, setServerState] = useState<ContactFormState>({
+    status: "idle",
+  });
 
-//   const handleSubmit = (e: React.FormEvent) => {
-//     e.preventDefault();
-//     if (!formRef.current) return;
+  const localStatus: Status = serverState.status;
 
-//     setStatus("sending");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formRef.current) return;
 
-//     emailjs
-//       .sendForm(
-//         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-//         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-//         formRef.current,
-//         { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! },
-//       )
-//       .then(() => {
-//         setStatus("success");
-//         formRef.current?.reset();
-//         setTimeout(() => setStatus("idle"), 4000);
-//       })
-//       .catch((error) => {
-//         console.error("EmailJS error:", error);
-//         setStatus("error");
-//         setTimeout(() => setStatus("idle"), 4000);
-//       });
-//   };
+    // Inject current date into the hidden field
+    const dateInput = formRef.current.elements.namedItem("date") as HTMLInputElement;
+    const today = new Date();
+    const formattedDate = `${String(today.getDate()).padStart(2, "0")}/${String(
+      today.getMonth() + 1
+    ).padStart(2, "0")}/${today.getFullYear()}`;
+    dateInput.value = formattedDate;
 
-const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
-  if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
 
-  // Inject current date into the hidden field
-  const dateInput = formRef.current.elements.namedItem("date") as HTMLInputElement;
-  const today = new Date();
-  const formattedDate = `${String(today.getDate()).padStart(2, "0")}/${String(
-    today.getMonth() + 1
-  ).padStart(2, "0")}/${today.getFullYear()}`;
-  dateInput.value = formattedDate;
-
-  setStatus("sending");
-
-  emailjs
-    .sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-      formRef.current,
-      { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! }
-    )
-    .then(() => {
-      setStatus("success");
-      formRef.current?.reset();
-      setTimeout(() => setStatus("idle"), 4000);
-    })
-    .catch((error) => {
-      console.error("EmailJS error:", error);
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 4000);
+    startTransition(() => {
+      submitContactForm(serverState, formData).then((result) => {
+        setServerState(result);
+        if (result.status === "success") {
+          formRef.current?.reset();
+          setTimeout(() => setServerState({ status: "idle" }), 4000);
+        }
+      });
     });
-};
+  };
 
   const inputClass =
-    "w-full rounded-lg border border-(--accent)/20 bg-(--bg) px-4 py-2.5 text-sm text-(--text) placeholder:text-(--muted) focus:outline-none focus:border-(--accent) transition-colors";
+    "w-full rounded-lg border border-(--accent)/20 bg-(--bg) px-4 py-2.5 text-sm text-(--text) placeholder:text-(--muted) focus:outline-none focus:border-(--accent) transition-colors disabled:opacity-50";
   const labelClass = "block font-mono text-xs text-(--muted) mb-1.5";
 
   return (
     <section
       id="contact"
-      className="scroll-mt-24 px-6 md:px-12 py-24 max-w-6xl mx-auto lg:px-0"
+      className="scroll-mt-24 px-6 md:px-12 py-16 max-w-6xl mx-auto lg:px-0"
     >
       <SectionHeading
         eyebrow="~/contact $ ./send-message.sh"
@@ -156,6 +128,7 @@ const handleSubmit = (e: React.FormEvent) => {
                 required
                 placeholder="Your name"
                 className={inputClass}
+                disabled={isPending || localStatus === "sending"}
               />
             </div>
             <div>
@@ -166,6 +139,7 @@ const handleSubmit = (e: React.FormEvent) => {
                 required
                 placeholder="you@example.com"
                 className={inputClass}
+                disabled={isPending || localStatus === "sending"}
               />
             </div>
           </div>
@@ -178,6 +152,7 @@ const handleSubmit = (e: React.FormEvent) => {
                 name="phone"
                 placeholder="+880 1XXX-XXXXXX"
                 className={inputClass}
+                disabled={isPending || localStatus === "sending"}
               />
             </div>
             <div>
@@ -187,6 +162,7 @@ const handleSubmit = (e: React.FormEvent) => {
                 name="whatsapp"
                 placeholder="+880 1XXX-XXXXXX"
                 className={inputClass}
+                disabled={isPending || localStatus === "sending"}
               />
             </div>
           </div>
@@ -198,6 +174,7 @@ const handleSubmit = (e: React.FormEvent) => {
               name="budget"
               placeholder="e.g. $200 – $500"
               className={inputClass}
+              disabled={isPending || localStatus === "sending"}
             />
           </div>
 
@@ -209,6 +186,7 @@ const handleSubmit = (e: React.FormEvent) => {
               rows={5}
               placeholder="Tell me about your project..."
               className={`${inputClass} resize-none`}
+              disabled={isPending || localStatus === "sending"}
             />
           </div>
 
@@ -216,23 +194,23 @@ const handleSubmit = (e: React.FormEvent) => {
 
           <motion.button
             type="submit"
-            disabled={status === "sending"}
-            whileHover={{ scale: status === "sending" ? 1 : 1.02 }}
-            whileTap={{ scale: status === "sending" ? 1 : 0.98 }}
-            className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-(--accent) text-(--bg) font-semibold py-3 text-sm transition-opacity disabled:opacity-60"
+            disabled={isPending || localStatus === "sending"}
+            whileHover={{ scale: isPending || localStatus === "sending" ? 1 : 1.02 }}
+            whileTap={{ scale: isPending || localStatus === "sending" ? 1 : 0.98 }}
+            className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-(--accent) text-(--bg) font-semibold py-3 text-sm transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {status === "sending" ? "Sending..." : "Send Message"}
-            {status !== "sending" && <FiSend />}
+            {localStatus === "sending" || isPending ? "Sending..." : "Send Message"}
+            {localStatus !== "sending" && !isPending && <FiSend />}
           </motion.button>
 
-          {status === "success" && (
+          {localStatus === "success" && (
             <p className="text-center text-sm text-(--accent) font-mono">
               ✓ Message sent — I&apos;ll get back to you soon!
             </p>
           )}
-          {status === "error" && (
+          {localStatus === "error" && (
             <p className="text-center text-sm text-red-400 font-mono">
-              ✗ Something went wrong. Try emailing me directly.
+              ✗ {serverState.status === "error" ? serverState.message : "Something went wrong. Try emailing me directly."}
             </p>
           )}
         </motion.form>

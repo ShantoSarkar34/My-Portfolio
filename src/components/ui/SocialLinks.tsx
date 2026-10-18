@@ -13,7 +13,7 @@ export default function SocialLinks({
 }) {
   return (
     <div className={`flex items-center gap-3 ${className ?? ""}`}>
-      {socials.map((social, i) => {
+      {socials.map((social) => {
         const Icon = getIcon(social.icon);
         return (
           <motion.a

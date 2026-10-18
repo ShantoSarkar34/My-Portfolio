@@ -28,7 +28,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 px-6 md:px-12 py-24 max-w-6xl mx-auto lg:px-0"
+      className="scroll-mt-24 px-6 md:px-12 py-16 max-w-6xl mx-auto lg:px-0"
     >
       <SectionHeading
         eyebrow="~/skills $ cat package.json"

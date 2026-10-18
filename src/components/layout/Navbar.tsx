@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import { profile } from "@/src/data/profile";
 import ThemeToggle from "../ui/ThemeToggle";
 import { usePathname } from "next/navigation";
 

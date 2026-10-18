@@ -23,8 +23,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-(--accent)/20 bg-(--surface)">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 pt-12 lg:px-0">
+    <footer className="relative border-t border-(--accent)/20 bg-(--surface) mt-5 lg:mt-14">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 pt-8 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
           {/* Brand */}
           <div>
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-6 py-6 border-t border-(--accent)/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-6 py-3 border-t border-(--accent)/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-mono text-xs text-(--muted) text-center sm:text-left">
             © {year} {profile.name}. All rights reserved.
           </p>
@@ -79,7 +79,7 @@ export default function Footer() {
             whileHover={{ y: -3 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Back to top"
-            className="w-10 h-10 rounded-full border border-(--accent)/30 bg-(--bg) text-(--accent) flex items-center justify-center hover:border-(--accent) transition-colors"
+            className="w-8 h-8 rounded-full border border-(--accent)/30 bg-(--bg) text-(--accent) flex items-center justify-center hover:border-(--accent) transition-colors"
           >
             <FiArrowUp />
           </motion.button>
