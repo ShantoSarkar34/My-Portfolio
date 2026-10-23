@@ -1,6 +1,7 @@
 import { Project } from "../types";
 
 export const projects: Project[] = [
+  // Nexora Project
   {
     id: "proj-5",
     slug: "nexora-ai-freelance-marketplace",
@@ -82,6 +83,8 @@ export const projects: Project[] = [
 
     featured: true,
   },
+
+  // DropShip Project
   {
     id: "proj-6",
     slug: "swiftdrop-courier-logistics-platform",
@@ -159,74 +162,8 @@ export const projects: Project[] = [
 
     featured: true,
   },
-  {
-    id: "proj-4",
-    slug: "fixitnow-home-service",
-    title: "FixItNow Home Service Platform",
-    thumbnail: "/images/projects/fixit-project/admin-profile.png",
 
-    gallery: [
-      "/images/projects/fixit-project/hero.png",
-      "/images/projects/fixit-project/service.png",
-      "/images/projects/fixit-project/customer-profile.png",
-      "/images/projects/fixit-project/technician-profile.png",
-      "/images/projects/fixit-project/admin-profile.png",
-      "/images/projects/fixit-project/how-to-work.png",
-    ],
-
-    shortDescription:
-      "A modern full-stack home service booking platform with role-based dashboards, secure authentication, online payments, and complete service management for Customers, Technicians, and Admins.",
-
-    description:
-      "FixItNow is a complete home service marketplace built with Next.js and Express.js, designed to connect customers with skilled technicians for various household services. Customers can browse services, book appointments, complete secure online payments, and leave reviews after service completion. Technicians can manage their own services, availability, and booking requests, while administrators have full control over users, categories, technicians, and bookings through a dedicated dashboard. The project follows a modern full-stack architecture using Next.js App Router, TypeScript, Prisma ORM, PostgreSQL, JWT authentication with HttpOnly cookies, and SSLCommerz payment integration, delivering a secure, scalable, and responsive user experience.",
-
-    techStack: [
-      "Next.js 15",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Shadcn UI",
-      "TanStack Query",
-      "Node.js",
-      "Express.js",
-      "Prisma ORM",
-      "PostgreSQL",
-      "JWT Authentication",
-      "HttpOnly Cookies",
-      "REST API",
-      "Stripe Payment Gateway",
-    ],
-
-    features: [
-      "Role-based authentication and authorization for Customer, Technician, and Admin.",
-      "Modern responsive UI built with Next.js App Router and Tailwind CSS.",
-      "Customers can browse services, book appointments, track booking status, complete payments, and submit reviews.",
-      "Technicians can create, update, and manage their services along with booking requests.",
-      "Admin dashboard for managing users, technicians, bookings, and service categories.",
-      "Secure JWT authentication using HttpOnly cookies with automatic token refresh.",
-      "Integrated SSLCommerz payment gateway for secure online payments.",
-      "Dynamic technician profiles with ratings, experience, and offered services.",
-      "Advanced booking workflow including Pending, Accepted, Completed, and Cancelled statuses.",
-      "Profile management system for all user roles with editable personal information.",
-      "Smooth animations and premium UI using Framer Motion.",
-      "Fully responsive design optimized for desktop, tablet, and mobile devices.",
-    ],
-
-    challenges:
-      "The biggest challenge was designing a secure role-based authentication system that worked seamlessly across both the frontend and backend while protecting routes for Customers, Technicians, and Admins. Another major challenge was integrating JWT authentication with HttpOnly cookies, implementing automatic token refresh, managing booking workflows, and securely integrating SSLCommerz payment processing without compromising the user experience.",
-
-    futureImprovements:
-      "Future enhancements include real-time notifications using WebSockets, live technician location tracking, in-app messaging between customers and technicians, advanced service search with filters and maps, appointment scheduling with calendar integration, image uploads using cloud storage, email notifications, analytics dashboards, multi-language support, and Progressive Web App (PWA) functionality.",
-
-    liveUrl: "https://fixitnow-service.vercel.app/",
-    githubUrl: "https://github.com/ShantoSarkar34/FixItNow-Home-Service",
-    backendUrl: "https://fixitnow-server.onrender.com/",
-    backendGithubUrl:
-      "https://github.com/ShantoSarkar34/FixItNow-home-service-backend",
-
-    featured: true,
-  },
+  // Contract Ripple Project
   {
     id: "proj-7",
     slug: "contractripple-api-change-impact-mapper",
@@ -306,6 +243,78 @@ export const projects: Project[] = [
 
     featured: true,
   },
+
+  // FixitNow Project
+  {
+    id: "proj-4",
+    slug: "fixitnow-home-service",
+    title: "FixItNow Home Service Platform",
+    thumbnail: "/images/projects/fixit-project/admin-profile.png",
+
+    gallery: [
+      "/images/projects/fixit-project/hero.png",
+      "/images/projects/fixit-project/service.png",
+      "/images/projects/fixit-project/customer-profile.png",
+      "/images/projects/fixit-project/technician-profile.png",
+      "/images/projects/fixit-project/admin-profile.png",
+      "/images/projects/fixit-project/how-to-work.png",
+    ],
+
+    shortDescription:
+      "A modern full-stack home service booking platform with role-based dashboards, secure authentication, online payments, and complete service management for Customers, Technicians, and Admins.",
+
+    description:
+      "FixItNow is a complete home service marketplace built with Next.js and Express.js, designed to connect customers with skilled technicians for various household services. Customers can browse services, book appointments, complete secure online payments, and leave reviews after service completion. Technicians can manage their own services, availability, and booking requests, while administrators have full control over users, categories, technicians, and bookings through a dedicated dashboard. The project follows a modern full-stack architecture using Next.js App Router, TypeScript, Prisma ORM, PostgreSQL, JWT authentication with HttpOnly cookies, and SSLCommerz payment integration, delivering a secure, scalable, and responsive user experience.",
+
+    techStack: [
+      "Next.js 15",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Shadcn UI",
+      "TanStack Query",
+      "Node.js",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL",
+      "JWT Authentication",
+      "HttpOnly Cookies",
+      "REST API",
+      "Stripe Payment Gateway",
+    ],
+
+    features: [
+      "Role-based authentication and authorization for Customer, Technician, and Admin.",
+      "Modern responsive UI built with Next.js App Router and Tailwind CSS.",
+      "Customers can browse services, book appointments, track booking status, complete payments, and submit reviews.",
+      "Technicians can create, update, and manage their services along with booking requests.",
+      "Admin dashboard for managing users, technicians, bookings, and service categories.",
+      "Secure JWT authentication using HttpOnly cookies with automatic token refresh.",
+      "Integrated SSLCommerz payment gateway for secure online payments.",
+      "Dynamic technician profiles with ratings, experience, and offered services.",
+      "Advanced booking workflow including Pending, Accepted, Completed, and Cancelled statuses.",
+      "Profile management system for all user roles with editable personal information.",
+      "Smooth animations and premium UI using Framer Motion.",
+      "Fully responsive design optimized for desktop, tablet, and mobile devices.",
+    ],
+
+    challenges:
+      "The biggest challenge was designing a secure role-based authentication system that worked seamlessly across both the frontend and backend while protecting routes for Customers, Technicians, and Admins. Another major challenge was integrating JWT authentication with HttpOnly cookies, implementing automatic token refresh, managing booking workflows, and securely integrating SSLCommerz payment processing without compromising the user experience.",
+
+    futureImprovements:
+      "Future enhancements include real-time notifications using WebSockets, live technician location tracking, in-app messaging between customers and technicians, advanced service search with filters and maps, appointment scheduling with calendar integration, image uploads using cloud storage, email notifications, analytics dashboards, multi-language support, and Progressive Web App (PWA) functionality.",
+
+    liveUrl: "https://fixitnow-service.vercel.app/",
+    githubUrl: "https://github.com/ShantoSarkar34/FixItNow-Home-Service",
+    backendUrl: "https://fixitnow-server.onrender.com/",
+    backendGithubUrl:
+      "https://github.com/ShantoSarkar34/FixItNow-home-service-backend",
+
+    featured: true,
+  },
+
+  // Synthera Project
   {
     id: "proj-1",
     slug: "synthera-project",
@@ -348,6 +357,7 @@ export const projects: Project[] = [
     featured: true,
   },
 
+  // Shop O Project
   {
     id: "proj-2",
     slug: "ecommarce-project",
@@ -390,6 +400,7 @@ export const projects: Project[] = [
     featured: true,
   },
 
+  // Chicken Hub Project
   // {
   //   id: "proj-3",
   //   slug: "chicken-hub-project",
