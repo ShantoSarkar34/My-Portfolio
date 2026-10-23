@@ -228,167 +228,167 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-  id: "proj-7",
-  slug: "contractripple-api-change-impact-mapper",
-  title: "ContractRipple - API Change Impact Mapper",
-  thumbnail: "/images/projects/contractripple/dashboard.png",
+    id: "proj-7",
+    slug: "contractripple-api-change-impact-mapper",
+    title: "ContractRipple - API Change Impact Mapper",
+    thumbnail: "/images/projects/contractripple/dashboard.png",
 
-  gallery: [
-    "/images/projects/contractripple/hero.png",
-    "/images/projects/contractripple/dashboard.png",
-    "/images/projects/contractripple/contracts.png",
-    "/images/projects/contractripple/analysis-results.png",
-    "/images/projects/contractripple/impact-graph.png",
-    "/images/projects/contractripple/history.png",
-  ],
+    gallery: [
+      "/images/projects/contractripple/hero.png",
+      "/images/projects/contractripple/dashboard.png",
+      "/images/projects/contractripple/contracts.png",
+      "/images/projects/contractripple/analysis-results.png",
+      "/images/projects/contractripple/impact-graph.png",
+      "/images/projects/contractripple/history.png",
+    ],
 
-  shortDescription:
-    "A full-stack developer tool that compares OpenAPI contract versions, identifies potentially breaking changes, analyzes frontend source code for affected API integrations, and visualizes evidence-backed impact relationships.",
+    shortDescription:
+      "A full-stack developer tool that compares OpenAPI contract versions, identifies potentially breaking changes, analyzes frontend source code for affected API integrations, and visualizes evidence-backed impact relationships.",
 
-  description:
-    "ContractRipple is a full-stack developer tool designed to help developers understand the impact of API contract changes before those changes break existing integrations. Users can create projects, manage API contracts, upload baseline and candidate OpenAPI specifications in JSON or YAML format, and review classified differences with explanations and JSON Pointer evidence. The platform extends contract comparison with TypeScript and JavaScript source analysis, identifying potential API call sites and connecting changed operations to relevant source files. Developers can explore evidence-backed impact relationships, review regression-test suggestions, access saved analysis history, and export reports in JSON and Markdown formats. ContractRipple features a modular architecture built with Next.js, React, TypeScript, Tailwind CSS, Express.js, Prisma, and PostgreSQL, with authenticated workspaces and server-side resource ownership protections.",
+    description:
+      "ContractRipple is a full-stack developer tool designed to help developers understand the impact of API contract changes before those changes break existing integrations. Users can create projects, manage API contracts, upload baseline and candidate OpenAPI specifications in JSON or YAML format, and review classified differences with explanations and JSON Pointer evidence. The platform extends contract comparison with TypeScript and JavaScript source analysis, identifying potential API call sites and connecting changed operations to relevant source files. Developers can explore evidence-backed impact relationships, review regression-test suggestions, access saved analysis history, and export reports in JSON and Markdown formats. ContractRipple features a modular architecture built with Next.js, React, TypeScript, Tailwind CSS, Express.js, Prisma, and PostgreSQL, with authenticated workspaces and server-side resource ownership protections.",
 
-  techStack: [
-    "Next.js 16",
-    "React 19",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js 5",
-    "PostgreSQL",
-    "Prisma ORM",
-    "Zod",
-    "OpenAPI",
-    "TypeScript Compiler API",
-    "AST-Based Source Analysis",
-    "REST API",
-    "Cookie-Based Authentication",
-    "Server-Side Sessions",
-    "CSRF Protection",
-    "npm Workspaces",
-    "JSON",
-    "YAML",
-  ],
+    techStack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js 5",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Zod",
+      "OpenAPI",
+      "TypeScript Compiler API",
+      "AST-Based Source Analysis",
+      "REST API",
+      "Cookie-Based Authentication",
+      "Server-Side Sessions",
+      "CSRF Protection",
+      "npm Workspaces",
+      "JSON",
+      "YAML",
+    ],
 
-  features: [
-    "OpenAPI contract comparison for reviewing baseline and candidate API specifications in JSON or YAML format.",
-    "Automated detection and classification of API changes, including added, modified, and removed operations and schema elements supported by the comparison engine.",
-    "Risk classification for potentially breaking and non-breaking changes to help developers prioritize API compatibility reviews.",
-    "Evidence-backed findings with human-readable explanations, before-and-after details, and JSON Pointer locations.",
-    "TypeScript and JavaScript source analysis using the TypeScript Compiler API to identify supported API call patterns.",
-    "Secure ZIP source-upload pipeline designed to analyze supported frontend source files without executing uploaded code.",
-    "GitHub repository analysis through a server-side integration that keeps repository credentials out of the browser.",
-    "Impact graph connecting changed API operations to matching frontend source files using persisted source-analysis evidence.",
-    "Accessible impact relationship table providing an alternative to graph-based navigation.",
-    "Source evidence containing file paths, line numbers, columns, code snippets, and matching details where available.",
-    "Saved analysis history with cursor-based pagination for revisiting previously completed comparisons.",
-    "Downloadable JSON and Markdown reports generated from persisted findings and source-analysis data.",
-    "Regression review suggestions derived from classified findings to help developers plan targeted validation and testing.",
-    "Authenticated user workspaces for managing projects, contracts, versions, and analysis records.",
-    "Email and password authentication with scrypt password hashing and server-side session management.",
-    "Security protections including HttpOnly session cookies, CSRF validation, origin checks, rate limiting, security headers, and resource ownership enforcement.",
-    "Modular monorepo architecture separating shared validation schemas, OpenAPI comparison logic, source analysis, impact graph generation, and backend services.",
-    "Automated testing and validation covering core application behavior, API services, security checks, and other implemented functionality.",
-  ],
+    features: [
+      "OpenAPI contract comparison for reviewing baseline and candidate API specifications in JSON or YAML format.",
+      "Automated detection and classification of API changes, including added, modified, and removed operations and schema elements supported by the comparison engine.",
+      "Risk classification for potentially breaking and non-breaking changes to help developers prioritize API compatibility reviews.",
+      "Evidence-backed findings with human-readable explanations, before-and-after details, and JSON Pointer locations.",
+      "TypeScript and JavaScript source analysis using the TypeScript Compiler API to identify supported API call patterns.",
+      "Secure ZIP source-upload pipeline designed to analyze supported frontend source files without executing uploaded code.",
+      "GitHub repository analysis through a server-side integration that keeps repository credentials out of the browser.",
+      "Impact graph connecting changed API operations to matching frontend source files using persisted source-analysis evidence.",
+      "Accessible impact relationship table providing an alternative to graph-based navigation.",
+      "Source evidence containing file paths, line numbers, columns, code snippets, and matching details where available.",
+      "Saved analysis history with cursor-based pagination for revisiting previously completed comparisons.",
+      "Downloadable JSON and Markdown reports generated from persisted findings and source-analysis data.",
+      "Regression review suggestions derived from classified findings to help developers plan targeted validation and testing.",
+      "Authenticated user workspaces for managing projects, contracts, versions, and analysis records.",
+      "Email and password authentication with scrypt password hashing and server-side session management.",
+      "Security protections including HttpOnly session cookies, CSRF validation, origin checks, rate limiting, security headers, and resource ownership enforcement.",
+      "Modular monorepo architecture separating shared validation schemas, OpenAPI comparison logic, source analysis, impact graph generation, and backend services.",
+      "Automated testing and validation covering core application behavior, API services, security checks, and other implemented functionality.",
+    ],
 
-  challenges:
-    "The primary challenge was designing a reliable workflow that connects API contract changes to the frontend code that may depend on them. Comparing OpenAPI specifications requires normalizing contract data, detecting meaningful differences, and classifying potential compatibility risks without overstating their consequences. Another significant challenge was analyzing TypeScript and JavaScript source code to identify supported API call patterns and match them to normalized OpenAPI operations. Building an evidence-backed impact graph required ensuring that relationships were derived from actual source-analysis results rather than inferred or fabricated connections. Additional challenges included secure source uploads, persistent analysis history, report generation, authenticated resource ownership, CSRF protection, and maintaining clear boundaries between the frontend, backend, database, and reusable analysis packages.",
+    challenges:
+      "The primary challenge was designing a reliable workflow that connects API contract changes to the frontend code that may depend on them. Comparing OpenAPI specifications requires normalizing contract data, detecting meaningful differences, and classifying potential compatibility risks without overstating their consequences. Another significant challenge was analyzing TypeScript and JavaScript source code to identify supported API call patterns and match them to normalized OpenAPI operations. Building an evidence-backed impact graph required ensuring that relationships were derived from actual source-analysis results rather than inferred or fabricated connections. Additional challenges included secure source uploads, persistent analysis history, report generation, authenticated resource ownership, CSRF protection, and maintaining clear boundaries between the frontend, backend, database, and reusable analysis packages.",
 
-  futureImprovements:
-    "Future enhancements include improving the responsive dashboard and analysis workspace, adding richer contract-diff visualization, expanding support for generated API clients and additional source-code patterns, improving detection of dynamically constructed URLs and custom API wrappers, and introducing more advanced impact-analysis filtering. Additional opportunities include GitHub App or OAuth-based repository access, pull-request integration, automated CI/CD compatibility checks, configurable breaking-change policies, OpenAPI linting, team workspaces, role-based access control, audit logs, email verification, password recovery, and more comprehensive end-to-end testing. Further improvements could also include scalable background processing for large source archives, more detailed analysis-history comparisons, and automated regression-test generation with clear separation between suggested tests and executed test results.",
+    futureImprovements:
+      "Future enhancements include improving the responsive dashboard and analysis workspace, adding richer contract-diff visualization, expanding support for generated API clients and additional source-code patterns, improving detection of dynamically constructed URLs and custom API wrappers, and introducing more advanced impact-analysis filtering. Additional opportunities include GitHub App or OAuth-based repository access, pull-request integration, automated CI/CD compatibility checks, configurable breaking-change policies, OpenAPI linting, team workspaces, role-based access control, audit logs, email verification, password recovery, and more comprehensive end-to-end testing. Further improvements could also include scalable background processing for large source archives, more detailed analysis-history comparisons, and automated regression-test generation with clear separation between suggested tests and executed test results.",
 
-  liveUrl: "https://contractripple.vercel.app/",
-  githubUrl: "",
+    liveUrl: "https://contractripple.vercel.app/",
+    githubUrl: "https://github.com/ShantoSarkar34/contract-ripple.git",
 
-  backendUrl: "https://contractripple-api.vercel.app/",
-  backendGithubUrl: "",
+    backendUrl: "https://contractripple-api.vercel.app/",
+    backendGithubUrl:
+      "https://github.com/ShantoSarkar34/contract-ripple/tree/main/apps/api",
 
-  featured: true,
-},
-  // {
-  //   id: "proj-1",
-  //   slug: "synthera-project",
-  //   title: "Synthera Online Shop with AI",
-  //   thumbnail: "/images/projects/project-1.png",
-  //   gallery: [],
-  //   shortDescription:
-  //     "A full-featured AI-powered e-commerce platform with role-based dashboards, product management, and an intelligent customer support chatbot.",
+    featured: true,
+  },
+  {
+    id: "proj-1",
+    slug: "synthera-project",
+    title: "Synthera Online Shop with AI",
+    thumbnail: "/images/projects/project-1.png",
+    gallery: [],
+    shortDescription:
+      "A full-featured AI-powered e-commerce platform with role-based dashboards, product management, and an intelligent customer support chatbot.",
 
-  //   description:
-  //     "Synthera is a modern full-stack e-commerce application designed to provide a seamless shopping experience for customers while offering dedicated dashboards for sellers and administrators. One of its standout features is an AI-powered chatbot that assists users with product information, login issues, purchasing guidance, and general site navigation. The platform implements secure authentication, role-based authorization, complete product management, shopping cart functionality, and an intuitive admin panel.",
+    description:
+      "Synthera is a modern full-stack e-commerce application designed to provide a seamless shopping experience for customers while offering dedicated dashboards for sellers and administrators. One of its standout features is an AI-powered chatbot that assists users with product information, login issues, purchasing guidance, and general site navigation. The platform implements secure authentication, role-based authorization, complete product management, shopping cart functionality, and an intuitive admin panel.",
 
-  //   techStack: [
-  //     "React",
-  //     "Node.js",
-  //     "Express.js",
-  //     "MongoDB",
-  //     "Firebase Authentication",
-  //     "Tailwind CSS",
-  //     "REST API",
-  //   ],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase Authentication",
+      "Tailwind CSS",
+      "REST API",
+    ],
 
-  //   features: [
-  //     "Secure role-based authentication for Admin, Seller, and User.",
-  //     "AI-powered chatbot for customer support and product assistance.",
-  //     "Complete product CRUD operations with seller-specific management.",
-  //     "Shopping cart and order workflow.",
-  //     "Admin dashboard for managing users and sellers.",
-  //     "Responsive UI optimized for desktop and mobile devices.",
-  //   ],
+    features: [
+      "Secure role-based authentication for Admin, Seller, and User.",
+      "AI-powered chatbot for customer support and product assistance.",
+      "Complete product CRUD operations with seller-specific management.",
+      "Shopping cart and order workflow.",
+      "Admin dashboard for managing users and sellers.",
+      "Responsive UI optimized for desktop and mobile devices.",
+    ],
 
-  //   challenges:
-  //     "One of the biggest challenges was implementing a scalable role-based authorization system while ensuring each user type could only access permitted routes and resources. Integrating the AI chatbot into the shopping experience without affecting overall application performance also required careful planning.",
+    challenges:
+      "One of the biggest challenges was implementing a scalable role-based authorization system while ensuring each user type could only access permitted routes and resources. Integrating the AI chatbot into the shopping experience without affecting overall application performance also required careful planning.",
 
-  //   futureImprovements:
-  //     "I plan to integrate secure online payment gateways, implement advanced product search with filtering, add order tracking, improve AI capabilities with contextual conversations, and migrate the project to Next.js with PostgreSQL and Prisma for better scalability.",
+    futureImprovements:
+      "I plan to integrate secure online payment gateways, implement advanced product search with filtering, add order tracking, improve AI capabilities with contextual conversations, and migrate the project to Next.js with PostgreSQL and Prisma for better scalability.",
 
-  //   liveUrl: "https://synthera-shop.vercel.app/",
-  //   githubUrl: "https://github.com/ShantoSarkar34/synthera-shop.git",
-  //   featured: true,
-  // },
-  
+    liveUrl: "https://synthera-shop.vercel.app/",
+    githubUrl: "https://github.com/ShantoSarkar34/synthera-shop.git",
+    featured: true,
+  },
 
-  // {
-  //   id: "proj-2",
-  //   slug: "ecommarce-project",
-  //   title: "Shop O",
-  //   thumbnail: "/images/projects/project-2.png",
-  //   gallery: [],
-  //   shortDescription:
-  //     "A multi-vendor e-commerce platform where anyone can register as a seller and manage their own products.",
+  {
+    id: "proj-2",
+    slug: "ecommarce-project",
+    title: "Shop O",
+    thumbnail: "/images/projects/project-2.png",
+    gallery: [],
+    shortDescription:
+      "A multi-vendor e-commerce platform where anyone can register as a seller and manage their own products.",
 
-  //   description:
-  //     "Shop O is a marketplace-style e-commerce application that allows users to create seller accounts and manage their own online stores. The application includes authentication, product management, shopping functionality, and responsive dashboards designed for different user roles. The payment system is currently under development and will be added in a future version.",
+    description:
+      "Shop O is a marketplace-style e-commerce application that allows users to create seller accounts and manage their own online stores. The application includes authentication, product management, shopping functionality, and responsive dashboards designed for different user roles. The payment system is currently under development and will be added in a future version.",
 
-  //   techStack: [
-  //     "React",
-  //     "Node.js",
-  //     "Express.js",
-  //     "MongoDB",
-  //     "Firebase Authentication",
-  //     "Tailwind CSS",
-  //     "REST API",
-  //   ],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase Authentication",
+      "Tailwind CSS",
+      "REST API",
+    ],
 
-  //   features: [
-  //     "Multi-vendor seller registration system.",
-  //     "Role-based authentication and authorization.",
-  //     "Product management with full CRUD functionality.",
-  //     "Shopping cart implementation.",
-  //     "Seller dashboard for managing products.",
-  //     "Responsive and user-friendly interface.",
-  //   ],
+    features: [
+      "Multi-vendor seller registration system.",
+      "Role-based authentication and authorization.",
+      "Product management with full CRUD functionality.",
+      "Shopping cart implementation.",
+      "Seller dashboard for managing products.",
+      "Responsive and user-friendly interface.",
+    ],
 
-  //   challenges:
-  //     "Designing a flexible marketplace where multiple sellers could independently manage their products required careful backend architecture and authorization logic. Keeping the application organized as the project grew was another valuable learning experience.",
+    challenges:
+      "Designing a flexible marketplace where multiple sellers could independently manage their products required careful backend architecture and authorization logic. Keeping the application organized as the project grew was another valuable learning experience.",
 
-  //   futureImprovements:
-  //     "Complete the payment gateway integration, implement order management, add customer reviews and ratings, improve search and filtering, and migrate the project to Next.js with PostgreSQL and Prisma.",
+    futureImprovements:
+      "Complete the payment gateway integration, implement order management, add customer reviews and ratings, improve search and filtering, and migrate the project to Next.js with PostgreSQL and Prisma.",
 
-  //   liveUrl: "https://online-shop9070-bd.surge.sh/",
-  //   githubUrl: "https://github.com/ShantoSarkar34/Chicken-hub-client-side",
-  //   featured: true,
-  // },
+    liveUrl: "https://online-shop9070-bd.surge.sh/",
+    githubUrl: "https://github.com/ShantoSarkar34/Chicken-hub-client-side",
+    featured: true,
+  },
 
   // {
   //   id: "proj-3",
